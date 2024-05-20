@@ -1,12 +1,10 @@
 extends Area2D
 
 @export var speed = 250 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
-	print(screen_size)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -26,3 +24,10 @@ func _process(delta):
 			velocity = velocity.normalized() * speed
 
 	position += velocity * delta
+
+
+
+
+
+func _on_area_entered(area):
+	get_tree().change_scene_to_file("res://node_2d.tscn")
