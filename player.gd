@@ -7,7 +7,11 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+<<<<<<< Updated upstream
 func _process(_delta):
+=======
+func _process(delta):
+>>>>>>> Stashed changes
 	velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
@@ -23,4 +27,8 @@ func _process(_delta):
 		else:
 			velocity = velocity.normalized() * speed
 
+<<<<<<< Updated upstream
 	move_and_slide()
+=======
+	position += velocity * delta
+>>>>>>> Stashed changes
