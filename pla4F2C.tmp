@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcyikfa7p0sho"]
+
+[ext_resource type="Texture2D" uid="uid://gxd7611uguhk" path="res://icon.svg" id="1_0mxd3"]
+[ext_resource type="Script" path="res://player.gd" id="1_tuhye"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tjroh"]
+radius = 6.0
+height = 46.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tuhye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_tjroh")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_0mxd3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
