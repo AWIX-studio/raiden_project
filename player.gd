@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 250 # How fast the player will move (pixels/sec).
 
@@ -7,8 +7,8 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
+func _process(_delta):
+	velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
 	if Input.is_action_pressed('ui_left'):
@@ -23,11 +23,4 @@ func _process(delta):
 		else:
 			velocity = velocity.normalized() * speed
 
-	position += velocity * delta
-
-
-
-
-
-func _on_area_entered(area):
-	get_tree().change_scene_to_file("res://node_2d.tscn")
+	move_and_slide()

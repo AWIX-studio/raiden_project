@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://qevswcbjplgl"]
+
+[ext_resource type="PackedScene" uid="uid://bcyikfa7p0sho" path="res://player.tscn" id="1_fu408"]
+[ext_resource type="Texture2D" uid="uid://cxdor6xcay3ls" path="res://Sprites/Tiles/TilePack_Instruction.png" id="2_x8p65"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f36sv"]
+texture = ExtResource("2_x8p65")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.5, -7.5, 7.5, -7.5, 7.5, 7.5, -7.5, 7.5)
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_hh76o"]
+tile_size = Vector2i(15, 15)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_f36sv")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_hh76o")
+format = 2
+layer_0/tile_data = PackedInt32Array(589835, 262144, 1, 655371, 262144, 1, 655372, 262144, 1, 720908, 262144, 1, 786444, 262144, 1, 786443, 262144, 1, 720907, 262144, 1, 655373, 262144, 1, 720909, 262144, 1, 589836, 262144, 1, 589834, 262144, 1, 655370, 262144, 1, 720906, 262144, 1, 786442, 262144, 1, 786445, 262144, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_fu408")]
+position = Vector2(337, 367)
