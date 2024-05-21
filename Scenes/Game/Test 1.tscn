@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://csdbo7wwkm8mv"]
+[gd_scene load_steps=9 format=3 uid="uid://bk72m2vgucg3v"]
 
 [ext_resource type="Texture2D" uid="uid://cxdor6xcay3ls" path="res://Sprites/Tiles/TilePack_Instruction.png" id="1_8r2sb"]
+[ext_resource type="Script" path="res://Scenes/Game/Manager.gd" id="1_ythii"]
 [ext_resource type="PackedScene" uid="uid://bcyikfa7p0sho" path="res://Scenes/player.tscn" id="2_u1df2"]
+[ext_resource type="PackedScene" uid="uid://dalbn4brq3cnl" path="res://Scenes/Menu/PauseMenu.tscn" id="4_l8nsx"]
 
 [sub_resource type="GDScript" id="GDScript_1snlx"]
 script/source = "extends Node2D
@@ -73,6 +75,10 @@ font_size = 60
 [node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_1snlx")
 
+[node name="Manager" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_ythii")
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 position = Vector2(1, -1)
@@ -91,3 +97,13 @@ label_settings = SubResource("LabelSettings_lvmj0")
 
 [node name="Player" parent="." instance=ExtResource("2_u1df2")]
 position = Vector2(182, 217)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseMenu" parent="CanvasLayer/CenterContainer" instance=ExtResource("4_l8nsx")]
+layout_mode = 2

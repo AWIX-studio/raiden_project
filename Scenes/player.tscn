@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bcyikfa7p0sho"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_tuhye"]
-[ext_resource type="Texture2D" uid="uid://3nrmv0toppgm" path="res://Scripts/Characters/1/1.png" id="2_ojljq"]
+[ext_resource type="Texture2D" uid="uid://3nrmv0toppgm" path="res://Sprites/Characters/1/1.png" id="2_d4p75"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tjroh"]
 radius = 8.0
@@ -18,7 +18,7 @@ shape = SubResource("CapsuleShape2D_tjroh")
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(0.045, 0)
 scale = Vector2(2, 2)
-texture = ExtResource("2_ojljq")
+texture = ExtResource("2_d4p75")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.38, 1.38)

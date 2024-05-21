@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dalbn4brq3cnl"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/PauseMenu.gd" id="1_2lr52"]
+[ext_resource type="Texture2D" uid="uid://cnvj3l50slbob" path="res://Sprites/Windows/Pause_Menu_Window.png" id="2_bhsad"]
+
+[sub_resource type="Gradient" id="Gradient_8b4wa"]
+colors = PackedColorArray(0.372549, 0.415686, 0.411765, 0.478431, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6qk7y"]
+gradient = SubResource("Gradient_8b4wa")
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -602.0
+offset_top = -328.0
+offset_right = -602.0
+offset_bottom = -328.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_2lr52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(610.202, 327.124)
+rotation = 1.5708
+scale = Vector2(13.91, 36.475)
+texture = SubResource("GradientTexture2D_6qk7y")
+
+[node name="PauseMenuWindow" type="Sprite2D" parent="."]
+position = Vector2(610.202, 327.124)
+scale = Vector2(3.615, 3.615)
+texture = ExtResource("2_bhsad")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 511.002
+offset_top = 264.269
+offset_right = 708.132
+offset_bottom = 330.269
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_button_down"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_button_down"]
