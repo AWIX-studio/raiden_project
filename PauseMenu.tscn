@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://b1kqacdxu0cgr"]
-
-[node name="PauseMenu" type="Node"]
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 141.0
-offset_top = -182.0
-offset_right = 456.0
-offset_bottom = 219.0
