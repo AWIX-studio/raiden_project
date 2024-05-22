@@ -102,8 +102,9 @@ position = Vector2(182, 217)
 process_mode = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 47.0
+offset_bottom = 46.0
+use_top_left = true
 
 [node name="PauseMenu" parent="CanvasLayer/CenterContainer" instance=ExtResource("4_l8nsx")]
 layout_mode = 2

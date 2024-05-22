@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuuxpv40svefh"
+path="res://.godot/imported/raiden title theme.mp3-b708fb27e68763ab6893efd87a7dcc2f.mp3str"
+
+[deps]
+
+source_file="res://SFX/raiden title theme.mp3"
+dest_files=["res://.godot/imported/raiden title theme.mp3-b708fb27e68763ab6893efd87a7dcc2f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
