@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://crc7cokhvw5sx"]
+[gd_scene load_steps=4 format=3 uid="uid://crc7cokhvw5sx"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_ild75"]
+[ext_resource type="FontFile" uid="uid://dr7t1wt42srma" path="res://Fonts/minecraft-ten-font-cyrillic.ttf" id="2_c2s1c"]
 [ext_resource type="AudioStream" uid="uid://cuuxpv40svefh" path="res://SFX/raiden title theme.mp3" id="2_unoiu"]
 
 [node name="Main_Menu" type="Node2D"]
@@ -26,16 +27,19 @@ theme_override_constants/separation = 30
 
 [node name="Play_Button" type="Button" parent="CanvasLayer/MainMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c2s1c")
 theme_override_font_sizes/font_size = 30
 text = "Play"
 
 [node name="Settings_Button" type="Button" parent="CanvasLayer/MainMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c2s1c")
 theme_override_font_sizes/font_size = 30
 text = "Settings"
 
 [node name="Quit_Button" type="Button" parent="CanvasLayer/MainMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c2s1c")
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 
@@ -62,7 +66,8 @@ layout_mode = 2
 
 [node name="Master Volume Text" type="Label" parent="CanvasLayer/Settings/Master"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_c2s1c")
+theme_override_font_sizes/font_size = 20
 text = "Master Volume"
 horizontal_alignment = 1
 
@@ -77,7 +82,8 @@ layout_mode = 2
 
 [node name="Music Volume Text" type="Label" parent="CanvasLayer/Settings/Music"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_c2s1c")
+theme_override_font_sizes/font_size = 20
 text = "Music Volume"
 horizontal_alignment = 1
 
@@ -92,7 +98,8 @@ layout_mode = 2
 
 [node name="SFX Volume Text" type="Label" parent="CanvasLayer/Settings/SFX"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_c2s1c")
+theme_override_font_sizes/font_size = 20
 text = "SFX Volume"
 horizontal_alignment = 1
 
@@ -104,6 +111,7 @@ value = 1.0
 
 [node name="BackMenu_Button" type="Button" parent="CanvasLayer/Settings"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c2s1c")
 theme_override_font_sizes/font_size = 30
 text = "Back to Menu"
 
