@@ -14,33 +14,36 @@ func _process(_delta):
 	if Input.is_action_pressed('ui_up'):
 		velocity.y -= 1
 	
-	# Sprite change on velocity
+	# Animation
 	var x = velocity.x
 	var y = velocity.y
+	$AnimationPlayer.speed_scale = 1
 	if x == 1 and y == 1:
-		$Icon.texture = load("res://Sprites/Characters/1/2.png")
+		$AnimationPlayer.play('Walk2')
 	elif x == 1 and y == 0:
-		$Icon.texture = load("res://Sprites/Characters/1/3.png")	
+		$AnimationPlayer.play('Walk3')
 	elif x == 1 and y == -1:
-		$Icon.texture = load("res://Sprites/Characters/1/4.png")
+		$AnimationPlayer.play('Walk4')
 	elif x == 0 and y == 1:
-		$Icon.texture = load("res://Sprites/Characters/1/1.png")
+		$AnimationPlayer.play('Walk1')
 	elif x == 0 and y == -1:
-		$Icon.texture = load("res://Sprites/Characters/1/5.png")
+		$AnimationPlayer.play('Walk5')
 	elif x == -1 and y == 1:
-		$Icon.texture = load("res://Sprites/Characters/1/8.png")
+		$AnimationPlayer.play('Walk8')
 	elif x == -1 and y == 0:
-		$Icon.texture = load("res://Sprites/Characters/1/7.png")
+		$AnimationPlayer.play('Walk7')
 	elif x == -1 and y == -1:
-		$Icon.texture = load("res://Sprites/Characters/1/6.png")
+		$AnimationPlayer.play('Walk6')
+	elif x == 0 and y == 0:
+		$AnimationPlayer.speed_scale = 100
 		
 	if velocity.length() > 0:
 		if Input.is_action_pressed("sprint"):
 			velocity = velocity.normalized() * speed * 1.5
+			$AnimationPlayer.speed_scale = 2
 		else:
 			velocity = velocity.normalized() * speed
-	
-	
+			$AnimationPlayer.speed_scale = 1
 	
 	move_and_slide()
 

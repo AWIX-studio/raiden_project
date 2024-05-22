@@ -1,11 +1,174 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcyikfa7p0sho"]
+[gd_scene load_steps=36 format=3 uid="uid://bcyikfa7p0sho"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_tuhye"]
 [ext_resource type="Texture2D" uid="uid://3nrmv0toppgm" path="res://Sprites/Characters/1/1.png" id="2_d4p75"]
+[ext_resource type="Texture2D" uid="uid://ccxcxr66kdvrj" path="res://Sprites/Characters/1/1.1.png" id="2_qgs0m"]
+[ext_resource type="Texture2D" uid="uid://2d2op43luqsy" path="res://Sprites/Characters/1/1.2.png" id="4_elpi7"]
+[ext_resource type="Texture2D" uid="uid://db5ddt78ywe1k" path="res://Sprites/Characters/1/2.1.png" id="5_lmm6p"]
+[ext_resource type="Texture2D" uid="uid://4g0yiedqmye5" path="res://Sprites/Characters/1/2.png" id="6_s0hhg"]
+[ext_resource type="Texture2D" uid="uid://brm5wpuff51q0" path="res://Sprites/Characters/1/2.2.png" id="7_ydjny"]
+[ext_resource type="Texture2D" uid="uid://cmxt372nko3y8" path="res://Sprites/Characters/1/3.1.png" id="8_tlu4u"]
+[ext_resource type="Texture2D" uid="uid://bdjxo8djbjxun" path="res://Sprites/Characters/1/3.png" id="9_c5uur"]
+[ext_resource type="Texture2D" uid="uid://dgeolo1qyib40" path="res://Sprites/Characters/1/3.2.png" id="10_5xm7x"]
+[ext_resource type="Texture2D" uid="uid://dl3ugt7xdoiy8" path="res://Sprites/Characters/1/4.1.png" id="11_3tmq8"]
+[ext_resource type="Texture2D" uid="uid://bluwd35auwayg" path="res://Sprites/Characters/1/4.png" id="12_pl2ut"]
+[ext_resource type="Texture2D" uid="uid://di4o1m1t065cp" path="res://Sprites/Characters/1/4.2.png" id="13_f2fn6"]
+[ext_resource type="Texture2D" uid="uid://bytlxvs0jmwob" path="res://Sprites/Characters/1/5.1.png" id="14_6onwn"]
+[ext_resource type="Texture2D" uid="uid://x2cq23he1fhj" path="res://Sprites/Characters/1/5.png" id="15_j4q3y"]
+[ext_resource type="Texture2D" uid="uid://e8q2xerxao2c" path="res://Sprites/Characters/1/5.2.png" id="16_mm2y1"]
+[ext_resource type="Texture2D" uid="uid://byca6x8x677rx" path="res://Sprites/Characters/1/6.1.png" id="17_en0vo"]
+[ext_resource type="Texture2D" uid="uid://d307tebkyw0ql" path="res://Sprites/Characters/1/6.png" id="18_kwqk3"]
+[ext_resource type="Texture2D" uid="uid://b4qoquuku00mi" path="res://Sprites/Characters/1/6.2.png" id="19_to0lq"]
+[ext_resource type="Texture2D" uid="uid://cfu8l68u85jbo" path="res://Sprites/Characters/1/7.1.png" id="20_pps2h"]
+[ext_resource type="Texture2D" uid="uid://bjk6w8w3usoac" path="res://Sprites/Characters/1/7.png" id="21_c5eh2"]
+[ext_resource type="Texture2D" uid="uid://dnov6bb8qdg7w" path="res://Sprites/Characters/1/7.2.png" id="22_xsyol"]
+[ext_resource type="Texture2D" uid="uid://bw53as1irgf1i" path="res://Sprites/Characters/1/8.1.png" id="23_hxink"]
+[ext_resource type="Texture2D" uid="uid://bf6qfc1kfhmtk" path="res://Sprites/Characters/1/8.png" id="24_cfcyt"]
+[ext_resource type="Texture2D" uid="uid://nluo25xi4hd3" path="res://Sprites/Characters/1/8.2.png" id="25_fchcv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tjroh"]
 radius = 8.0
 height = 26.0
+
+[sub_resource type="Animation" id="Animation_i6rbv"]
+resource_name = "Walk1"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_qgs0m"), ExtResource("2_d4p75"), ExtResource("4_elpi7"), ExtResource("2_d4p75")]
+}
+
+[sub_resource type="Animation" id="Animation_bh7sp"]
+resource_name = "Walk2"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_lmm6p"), ExtResource("6_s0hhg"), ExtResource("7_ydjny"), ExtResource("6_s0hhg")]
+}
+
+[sub_resource type="Animation" id="Animation_e4boq"]
+resource_name = "Walk3"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_tlu4u"), ExtResource("9_c5uur"), ExtResource("10_5xm7x"), ExtResource("9_c5uur")]
+}
+
+[sub_resource type="Animation" id="Animation_oowi2"]
+resource_name = "Walk4"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_3tmq8"), ExtResource("12_pl2ut"), ExtResource("13_f2fn6"), ExtResource("12_pl2ut")]
+}
+
+[sub_resource type="Animation" id="Animation_tet47"]
+resource_name = "Walk5"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_6onwn"), ExtResource("15_j4q3y"), ExtResource("16_mm2y1"), ExtResource("15_j4q3y")]
+}
+
+[sub_resource type="Animation" id="Animation_lm867"]
+resource_name = "Walk6"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("17_en0vo"), ExtResource("18_kwqk3"), ExtResource("19_to0lq"), ExtResource("18_kwqk3")]
+}
+
+[sub_resource type="Animation" id="Animation_jlt7f"]
+resource_name = "Walk7"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("20_pps2h"), ExtResource("21_c5eh2"), ExtResource("22_xsyol"), ExtResource("21_c5eh2")]
+}
+
+[sub_resource type="Animation" id="Animation_epefk"]
+resource_name = "Walk8"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("23_hxink"), ExtResource("24_cfcyt"), ExtResource("25_fchcv"), ExtResource("24_cfcyt")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4fnm"]
+_data = {
+"Walk1": SubResource("Animation_i6rbv"),
+"Walk2": SubResource("Animation_bh7sp"),
+"Walk3": SubResource("Animation_e4boq"),
+"Walk4": SubResource("Animation_oowi2"),
+"Walk5": SubResource("Animation_tet47"),
+"Walk6": SubResource("Animation_lm867"),
+"Walk7": SubResource("Animation_jlt7f"),
+"Walk8": SubResource("Animation_epefk")
+}
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_tuhye")
@@ -16,11 +179,6 @@ position = Vector2(1, 19)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_tjroh")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0.045, 0)
-scale = Vector2(2, 2)
-texture = ExtResource("2_d4p75")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.38, 1.38)
 position_smoothing_enabled = true
@@ -30,3 +188,12 @@ drag_left_margin = 0.1
 drag_top_margin = 0.1
 drag_right_margin = 0.1
 drag_bottom_margin = 0.1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x4fnm")
+}
+
+[node name="1" type="Sprite2D" parent="."]
+scale = Vector2(1.96, 1.96)
+texture = ExtResource("23_hxink")
