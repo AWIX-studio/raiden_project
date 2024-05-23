@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk72m2vgucg3v"]
+[gd_scene load_steps=11 format=3 uid="uid://bk72m2vgucg3v"]
 
 [ext_resource type="Texture2D" uid="uid://cxdor6xcay3ls" path="res://Sprites/Tiles/TilePack_Instruction.png" id="1_8r2sb"]
 [ext_resource type="Script" path="res://Scenes/Game/Manager.gd" id="1_ythii"]
@@ -6,19 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://55xonr18nk5c" path="res://Sprites/Tiles/TilePack_Instruction_++.png" id="3_jmfq8"]
 [ext_resource type="Texture2D" uid="uid://btj120lqknhj3" path="res://Sprites/Tiles/Blackout.png" id="4_ewytf"]
 [ext_resource type="PackedScene" uid="uid://dalbn4brq3cnl" path="res://Scenes/Menu/PauseMenu.tscn" id="4_l8nsx"]
-
-[sub_resource type="GDScript" id="GDScript_1snlx"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5v6lb"]
 texture = ExtResource("1_8r2sb")
@@ -226,7 +213,6 @@ sources/0 = SubResource("TileSetAtlasSource_5v6lb")
 sources/3 = SubResource("TileSetAtlasSource_tr15t")
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_1snlx")
 
 [node name="Manager" type="Node" parent="."]
 process_mode = 3
